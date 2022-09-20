@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        body {
+            background-color: #DCDCDC;
+            font-family: 'courier';
+            font-weight: 'bold';
+            color: black;
+            margin: 60px;
+        }
+
+        h2 {
+            color: rgb(146, 67, 67);
+            
+        }
+        input {
+            margin-bottom: 20px;
+        }
+        .cellNumber {
+            color: green;
+        }
+        #surname {
+            color: orange;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const url = new URL(window.location.href);
+            document.querySelector("#name").innerHTML = url.searchParams.get("name");
+            document.querySelector("#surname").innerHTML = url.searchParams.get("surname");
+            document.querySelector(".cellNumber").innerHTML = url.searchParams.get("cellNumber");
+            
+        });
+        
+    </script>
+    
+    <title>Display</title>
+</head>
+
+<body>
+    <h1>Display page</h1>
+    <h2>Name</h2>
+    <p id="name">Text</p><br>
+    <h2>Surname</h2>
+    <p id="surname">Text</p><br>
+    <h2>Cell Number</h2>
+    <p class="cellNumber">Text</p><br>
+</body>
+
+
+</html>
